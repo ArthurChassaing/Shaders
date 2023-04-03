@@ -7,8 +7,8 @@ public class SimpleMeshGenerator : MonoBehaviour
     void Start()
     {
         MakeTriangle();
-        MakeQuad(); 
-        MakeDoubleQuad();
+        //MakeQuad(); 
+        //MakeDoubleQuad();
     }
 
     void MakeTriangle()
@@ -21,8 +21,22 @@ public class SimpleMeshGenerator : MonoBehaviour
         };
 
         int[] indices = new int[] { 0, 1, 2 };
+        
+        Vector2[] uvs = new Vector2[]
+        {
+            new Vector2(0, 0),
+            new Vector2(0, 1),
+            new Vector2(1, 0)
+        };
+        
+        Color[] colors = 
+        {
+            Color.red,
+            Color.green,
+            Color.blue
+        };
 
-        BuildMesh("Triangle", vertices, indices);
+        BuildMesh("Triangle", vertices, indices,null,colors);
     }
 
     void MakeQuad()
@@ -95,7 +109,7 @@ public class SimpleMeshGenerator : MonoBehaviour
         BuildMesh("Quad", vertices, indices);
     }
 
-    protected void BuildMesh(string gameObjectName, Vector3[] vertices, int[] indices, Vector2[] uvs = null)
+    protected void BuildMesh(string gameObjectName, Vector3[] vertices, int[] indices, Vector2[] uvs = null, Color[] colors = null)
     {
         // Search in the scene if there is a GameObject called "gameObjectName". If yes, we destroy it.
         GameObject oldOne = GameObject.Find(gameObjectName);
@@ -113,6 +127,7 @@ public class SimpleMeshGenerator : MonoBehaviour
         meshFilter.mesh.vertices = vertices;
         meshFilter.mesh.triangles = indices;
         meshFilter.mesh.uv = uvs;
+        meshFilter.mesh.colors = colors;
 
         // Apply the material.
         meshRenderer.material = _MeshMaterial != null ? _MeshMaterial : new Material(Shader.Find("Universal Render Pipeline/Unlit"));

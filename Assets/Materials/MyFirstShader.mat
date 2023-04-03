@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MaterialShaderTest
+  m_Name: MyFirstShader
   m_Shader: {fileID: 4800000, guid: 8b0b5ae189dfbc74cbd74eafc5b7cdfb, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -25,6 +25,5 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats: []
-    m_Colors:
-    - _MainColor: {r: 0.5008433, g: 0.8490566, b: 0.17221431, a: 1}
+    m_Colors: []
   m_BuildTextureStacks: []
