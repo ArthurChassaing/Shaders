@@ -451,12 +451,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040233661}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 544fd71f49c36324da4328c2c1abc1fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _MeshMaterial: {fileID: 2100000, guid: 3b3eca23c6426ac41bab68edfea2ee29, type: 2}
+  _MeshMaterial: {fileID: 2100000, guid: 399e76774b9956342b453562adc8fb51, type: 2}
 --- !u!4 &2040233663
 Transform:
   m_ObjectHideFlags: 0
@@ -479,7 +479,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040233661}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c8ccbc1e9aa123a4da17ba8b08f49d12, type: 3}
   m_Name: 
