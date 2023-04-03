@@ -14,7 +14,7 @@ public class SimpleMeshGenerator : MonoBehaviour
 
     void MakeTriangle()
     {
-        Vector3[] vertices = new Vector3[]
+        Vector3[] vertices = new[]
         {
             new Vector3 (0.0f, 0.0f, 0.0f),
             new Vector3 (0.0f, 1.0f, 0.0f),
@@ -22,13 +22,20 @@ public class SimpleMeshGenerator : MonoBehaviour
         };
 
         int[] indices = new int[] { 0, 1, 2 };
+        
+        Color[] colors = new[]
+        {
+            Color.red,
+            Color.green,
+            Color.blue
+        };
 
-        BuildMesh("Triangle", vertices, indices);
+        BuildMesh("Triangle", vertices, indices, null, colors);
     }
 
     void MakeQuad()
     {
-        Vector3[] vertices = new Vector3[]
+        Vector3[] vertices = new[]
         {
             new Vector3 (2.0f, 0.0f, 0.0f),
             new Vector3 (2.0f, 1.0f, 0.0f),
@@ -43,7 +50,7 @@ public class SimpleMeshGenerator : MonoBehaviour
 
     void MakeDoubleQuad()
     {
-        Vector3[] vertices = new Vector3[]
+        Vector3[] vertices = new[]
         {
             new Vector3 (0.0f, 2.0f, 0.0f),
             new Vector3 (0.0f, 3.0f, 0.0f),
@@ -63,7 +70,7 @@ public class SimpleMeshGenerator : MonoBehaviour
     void MakeCube()
     {
         // TO DO: Vertices array of type Vector3
-        Vector3[] vertices = new Vector3[]
+        Vector3[] vertices = new[]
         {
             new Vector3(-2, 0, 0),
             new Vector3(-2, 1, 0),
@@ -92,21 +99,24 @@ public class SimpleMeshGenerator : MonoBehaviour
             3, 6, 4 // 6
         };
 
-        // TO DO: UVs array of type Color
+        // TO DO: colors array of type Color
         Color[] colors = new Color[]
         {
-            new Color(0.5f, 0.5f, 0.5f),
-            new Color(0.5f, 0f, 0f),
-            new Color(0.5f, 0.5f, 0f),
-            new Color(0f, 0.5f, 0.5f),
-            new Color(0f, 0f, 0.5f),
+            new(0.5f, 0.5f, 0.5f),
+            new(0.5f, 0f, 0f),
+            new(0.5f, 0.5f, 0f),
+            new(0f, 0.5f, 0.5f),
+            new(0f, 0f, 0.5f),
+            new(0.5f, 0f, 0.5f),
+            new(0f, 0.5f, 0f),
+            new(0f, 0f, 0f)
         };
         
         // TO DO: appeller la fonction BuildMesh avec les bons paramètres
-        BuildMesh("Quad", vertices, indices);
+        BuildMesh("Cube", vertices, indices, null, colors);
     }
 
-    protected void BuildMesh(string gameObjectName, Vector3[] vertices, int[] indices, Vector2[] uvs = null)
+    protected void BuildMesh(string gameObjectName, Vector3[] vertices, int[] indices, Vector2[] uvs = null, Color[] colors = null)
     {
         // Search in the scene if there is a GameObject called "gameObjectName". If yes, we destroy it.
         GameObject oldOne = GameObject.Find(gameObjectName);
@@ -124,6 +134,7 @@ public class SimpleMeshGenerator : MonoBehaviour
         meshFilter.mesh.vertices = vertices;
         meshFilter.mesh.triangles = indices;
         meshFilter.mesh.uv = uvs;
+        meshFilter.mesh.colors = colors;
 
         // Apply the material.
         meshRenderer.material = _MeshMaterial != null ? _MeshMaterial : new Material(Shader.Find("Universal Render Pipeline/Unlit"));

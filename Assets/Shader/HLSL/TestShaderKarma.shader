@@ -1,4 +1,4 @@
-Shader "Learning/Unlit/TO RENAME"
+Shader "Learning/Unlit/Shader Karma"
 {
     Properties
     {   
