@@ -58,6 +58,42 @@ public class SimpleMeshGenerator : MonoBehaviour
 
         BuildMesh("DoubleQuad", vertices, indices);
     }
+    
+    void MakeCube()
+    {
+        // TO DO: Vertices array of type Vector3
+        Vector3[] vertices = new Vector3[8]
+        {
+            new Vector3(0, 0, 0),
+            new Vector3(0, 1, 0),
+            new Vector3(1, 0, 0),
+            new Vector3(1, 1, 0),
+            new Vector3(1, 1, 1),
+            new Vector3(1, 0, 1),
+            new Vector3(0, 1, 1),
+            new Vector3(0, 0, 1),
+        };
+        
+        // TO DO: Indices array of type int
+        int[] indices = new int[36]
+        {
+            0, 1, 2, 
+            2, 1, 3, // 1
+            3, 2, 5,
+            5, 3, 4, // 2
+            4, 5, 6,
+            6, 5, 7, // 3
+            7, 5, 2,
+            2, 0, 7, // 4
+            7, 0, 1,
+            1, 7, 6, // 5
+            6, 1, 3,
+            3, 6, 4 // 6
+        };
+        
+        // TO DO: appeller la fonction BuildMesh avec les bons paramètres
+        BuildMesh("Quad", vertices, indices);
+    }
 
     protected void BuildMesh(string gameObjectName, Vector3[] vertices, int[] indices, Vector2[] uvs = null)
     {
