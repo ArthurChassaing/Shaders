@@ -9,6 +9,7 @@ public class SimpleMeshGenerator : MonoBehaviour
         MakeTriangle();
         MakeQuad(); 
         MakeDoubleQuad();
+        MakeCube();
     }
 
     void MakeTriangle()
@@ -62,20 +63,20 @@ public class SimpleMeshGenerator : MonoBehaviour
     void MakeCube()
     {
         // TO DO: Vertices array of type Vector3
-        Vector3[] vertices = new Vector3[8]
+        Vector3[] vertices = new Vector3[]
         {
-            new Vector3(0, 0, 0),
-            new Vector3(0, 1, 0),
-            new Vector3(1, 0, 0),
-            new Vector3(1, 1, 0),
-            new Vector3(1, 1, 1),
-            new Vector3(1, 0, 1),
-            new Vector3(0, 1, 1),
-            new Vector3(0, 0, 1),
+            new Vector3(-2, 0, 0),
+            new Vector3(-2, 1, 0),
+            new Vector3(-1, 0, 0),
+            new Vector3(-1, 1, 0),
+            new Vector3(-1, 1, 1),
+            new Vector3(-1, 0, 1),
+            new Vector3(-2, 1, 1),
+            new Vector3(-2, 0, 1),
         };
         
         // TO DO: Indices array of type int
-        int[] indices = new int[36]
+        int[] indices = new int[]
         {
             0, 1, 2, 
             2, 1, 3, // 1
@@ -89,6 +90,16 @@ public class SimpleMeshGenerator : MonoBehaviour
             1, 7, 6, // 5
             6, 1, 3,
             3, 6, 4 // 6
+        };
+
+        // TO DO: UVs array of type Color
+        Color[] colors = new Color[]
+        {
+            new Color(0.5f, 0.5f, 0.5f),
+            new Color(0.5f, 0f, 0f),
+            new Color(0.5f, 0.5f, 0f),
+            new Color(0f, 0.5f, 0.5f),
+            new Color(0f, 0f, 0.5f),
         };
         
         // TO DO: appeller la fonction BuildMesh avec les bons paramètres

@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7bfe4dc-37fc-47b2-8eb9-02f918541df7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SimpleMeshGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SimpleMeshGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity-Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity-Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/URP-HighFidelity.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/boot.config" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1680506666192</updated>
       <workItem from="1680506669831" duration="55000" />
-      <workItem from="1680506936610" duration="4472000" />
+      <workItem from="1680506936610" duration="6523000" />
     </task>
     <servers />
   </component>
