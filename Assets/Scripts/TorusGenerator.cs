@@ -29,6 +29,6 @@ public class TorusGenerator : SimpleMeshGenerator
 
     void MakeTorus()
     {
-        BuildMesh("Torus", vertices.ToArray(), indices.ToArray());
+        //BuildMesh("Torus", vertices.ToArray(), indices.ToArray());
     }
 }
