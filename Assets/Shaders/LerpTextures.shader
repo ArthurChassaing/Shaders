@@ -1,36 +1,41 @@
-Shader "RENAME ME"
+Shader "Lerp Textures"
 {
-    // Properties are variables that can be set in the inspector
-    // DO NOT FORGOT TO DECLARE THEM IN THE HLSL PROGRAM!
     Properties
-    {   
-        // _HlslVariableName("Inspector Display Name", UnityType) = defaultValue
+    {
+        _Color("Color", Color) = (1,1,1,1)
+		_Tex1("Texture 1", 2D) = "white" {}
+        _Tex2("Texture 2", 2D) = "white" {}
+        _Lerp("Lerp", Range(0, 1)) = 0.5
     }
-    
-    SubShader
+
+        SubShader
     {
         // Default tags for a shader
         Tags { "RenderType" = "Opaque" "Queue" = "Geometry" }
 
-		Pass
+        Pass
         {
-			HLSLPROGRAM
+            HLSLPROGRAM
             #pragma vertex vert  
             #pragma fragment frag
             #include "UnityCG.cginc"
 
-            // HlslType _HlslVariableName;
+            float4 _Color;
+            sampler2D _Tex1, _Tex2;
+            float _Lerp;
 			
             // This struct is used to pass data from the vertex buffer to the vertex shader.
 			struct vertexInput
             {
                 float4 vertex : POSITION;
+                float2 uv : TEXCOORD0;
             };
 			
             // This struct is used to pass data from the vertex shader to the pixel shader.
             struct v2f
             {
-                float4 vertex : SV_POSITION;    
+                float4 vertex : SV_POSITION;
+                float2 uv : TEXCOORD0;
             };
 
             // This function is called for each vertex.
@@ -38,13 +43,14 @@ Shader "RENAME ME"
             {
                 v2f o;
 	            o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
+                o.uv = v.uv;
                 return o;
             }
 
             // This function is called for each pixel.
             float4 frag(v2f i) : SV_Target
             {
-                return float4(1,1,1,1); 
+                return lerp(tex2D(_Tex1, i.uv), tex2D(_Tex2, i.uv), _Lerp) * _Color;
             }
             
             ENDHLSL

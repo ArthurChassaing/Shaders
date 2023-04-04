@@ -1,25 +1,23 @@
-Shader "RENAME ME"
+Shader "Simple Color"
 {
-    // Properties are variables that can be set in the inspector
-    // DO NOT FORGOT TO DECLARE THEM IN THE HLSL PROGRAM!
     Properties
-    {   
-        // _HlslVariableName("Inspector Display Name", UnityType) = defaultValue
+    {
+        _Color("Color", Color) = (1,1,1,1)
     }
-    
-    SubShader
+
+        SubShader
     {
         // Default tags for a shader
         Tags { "RenderType" = "Opaque" "Queue" = "Geometry" }
 
-		Pass
+        Pass
         {
-			HLSLPROGRAM
+            HLSLPROGRAM
             #pragma vertex vert  
             #pragma fragment frag
             #include "UnityCG.cginc"
 
-            // HlslType _HlslVariableName;
+            float4 _Color;
 			
             // This struct is used to pass data from the vertex buffer to the vertex shader.
 			struct vertexInput
@@ -44,7 +42,7 @@ Shader "RENAME ME"
             // This function is called for each pixel.
             float4 frag(v2f i) : SV_Target
             {
-                return float4(1,1,1,1); 
+                return _Color;
             }
             
             ENDHLSL
