@@ -1,8 +1,9 @@
-Shader "Learning/Unlit/TO RENAME"
+Shader "Learning/Unlit/Texture"
 {
     Properties
     {   
         // NOM_VARIABLE("NOM_AFFICHE_DANS_L'INSPECTOR", Shaderlab type) = defaultValue
+        _texture("Albedo", 2D) = "white" {}
     }
     
     SubShader
@@ -14,16 +15,20 @@ Shader "Learning/Unlit/TO RENAME"
             #pragma fragment frag
 
             #include "UnityCG.cginc"
-			
+
+			sampler2D _texture; // variable globale qui contient la texture
+
 			struct vertexInput
-            {
-                float4 vertex : POSITION;						
-            };
+			{
+				float4 vertex : POSITION;
+				float2 uv : TEXCOORD0;
+			};
 			
-            struct v2f
-            {
-                float4 vertex : SV_POSITION;    
-            };
+			struct v2f
+			{
+				float4 vertex : SV_POSITION;
+				float2 uv : TEXCOORD0;
+			};
 			
 			// Vertex shader
 			// exécuté pour chaque vertex à chaque frame
@@ -32,6 +37,7 @@ Shader "Learning/Unlit/TO RENAME"
             {
                 v2f o;
 	            o.vertex = mul(UNITY_MATRIX_MVP, v.vertex); // ligne obligatoire // UNITY_MATRIX_MVP = matrice de projection
+            	o.uv = v.uv;
                 return o;
             }
 
@@ -40,7 +46,7 @@ Shader "Learning/Unlit/TO RENAME"
 			// Fonction qui calcule la couleur de chaque pixel
             float4 frag(v2f i) : SV_Target
             {
-                return float4(1,0,0,0); // ligne obligatoire // float4(r,g,b,a) = couleur
+                return tex2D(_texture, i.uv); // ligne obligatoire // tex2D(texture, uv) = couleur
             }
             
             ENDHLSL
