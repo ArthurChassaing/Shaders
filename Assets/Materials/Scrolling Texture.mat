@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Blend Textures using distance
-  m_Shader: {fileID: 4800000, guid: aaf4b3e76c138ac4f8a0f3d898199ad6, type: 3}
+  m_Name: Scrolling Texture
+  m_Shader: {fileID: 4800000, guid: daa04aed8840c9b48acdf0a111ab054e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -23,17 +23,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Tex1:
-        m_Texture: {fileID: 2800000, guid: b26670ba10682e54eb3a2b73d4c5d253, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Tex2:
-        m_Texture: {fileID: 2800000, guid: be8ec7d89150c244f847a0988922d6be, type: 3}
+    - _Tex:
+        m_Texture: {fileID: 2800000, guid: 7804e52502963524785982d3951f9836, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats:
-    - _MaxDistance: 3
-    - _MinDistance: 1
-    m_Colors: []
+    m_Floats: []
+    m_Colors:
+    - _ScrollSpeed: {r: -0.05, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

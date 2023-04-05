@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Blend Textures using distance
-  m_Shader: {fileID: 4800000, guid: aaf4b3e76c138ac4f8a0f3d898199ad6, type: 3}
+  m_Name: Rainbow Gradiant
+  m_Shader: {fileID: 4800000, guid: fde13156ffe10b048ad6196395f3e6eb, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -23,17 +23,11 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Tex1:
-        m_Texture: {fileID: 2800000, guid: b26670ba10682e54eb3a2b73d4c5d253, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Tex2:
-        m_Texture: {fileID: 2800000, guid: be8ec7d89150c244f847a0988922d6be, type: 3}
+    - _Tex:
+        m_Texture: {fileID: 2800000, guid: c99d90f5d1d55354d856a7fd309db9d7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats:
-    - _MaxDistance: 3
-    - _MinDistance: 1
+    m_Floats: []
     m_Colors: []
   m_BuildTextureStacks: []
