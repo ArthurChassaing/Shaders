@@ -2,21 +2,18 @@ using UnityEngine;
 
 public class CollectibleItem : MonoBehaviour
 {
-    [SerializeField] GameObject FXToSpawn;
+    [SerializeField] GameObject _FXToSpawn = null;
+    [SerializeField] AudioClip _clipToPlay = null;
 
     private void OnTriggerEnter(Collider other)
     {
-        // S'assurer que le player a bien le tag "Player"
         if (other.CompareTag("Player"))
         {
-            if (FXToSpawn != null)
-                Instantiate(FXToSpawn, gameObject.transform.position, Quaternion.identity);
+            if (_FXToSpawn != null)
+                Instantiate(_FXToSpawn, transform.position, Quaternion.identity);
 
-            // Apply a visual effect on a player 
-                // => Level up effect / activate shield 
-            // H�ritage � utiliser si besoin
-
-            // Play a sound (?)
+            if (_clipToPlay != null)
+                AudioSource.PlayClipAtPoint(_clipToPlay, transform.position);
 
             Destroy(gameObject);
         }
