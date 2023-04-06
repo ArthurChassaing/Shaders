@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7bfe4dc-37fc-47b2-8eb9-02f918541df7" name="Changes" comment="" />
+    <list default="true" id="c7bfe4dc-37fc-47b2-8eb9-02f918541df7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Shaders/.idea/indexLayout.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,15 +29,15 @@
   },
   "keyToStringList": {
     "rider.external.source.directories": [
-      "C:\\Users\\Jun\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Jun\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\Jun\\AppData\\Local\\Symbols\\src"
+      "C:\\Users\\achassaing\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\achassaing\\AppData\\Roaming\\JetBrains\\Rider2022.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\achassaing\\AppData\\Local\\Symbols\\src"
     ]
   }
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Unity\2022.2.12f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity 2022.2.12f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;C:\Users\Le Karma\Documents\Projets\Projet 2023\Shaders&quot; -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Le Karma\Documents\Projets\Projet 2023\Shaders" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -43,7 +45,7 @@
       <method v="2" />
     </configuration>
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="D:\Unity\2022.2.12f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity 2022.2.12f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;C:\Users\Le Karma\Documents\Projets\Projet 2023\Shaders&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\Le Karma\Documents\Projets\Projet 2023\Shaders" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -82,6 +84,7 @@
       <workItem from="1680506669831" duration="55000" />
       <workItem from="1680506936610" duration="4472000" />
       <workItem from="1680513421971" duration="2741000" />
+      <workItem from="1680784102242" duration="9000" />
     </task>
     <servers />
   </component>
