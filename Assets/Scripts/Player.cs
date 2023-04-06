@@ -1,36 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] GameObject _shield;
-    [SerializeField] GameObject _projectileToSpawn;
-    [SerializeField] Transform _projectileSpawnLocation;
+    [SerializeField] private GameObject _spellToCast;
 
-    private int _life = 100;
     private int _maxLife = 100;
+    private int _life = 100;
+    private bool _areInputsEnabled = true;
 
     void Update()
     {
         Shader.SetGlobalVector("_WorldSpacePlayerPos", transform.position);
 
-        // Projectile
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (_areInputsEnabled)
         {
-            GameObject clone = Instantiate(_projectileToSpawn, _projectileSpawnLocation.transform.position, Quaternion.identity);
-            clone.transform.forward = transform.forward;
+            if (Input.GetKeyDown(KeyCode.Space))
+                CastSpell();
         }
+    }
 
-        // Shield
-        if (Input.GetKeyDown(KeyCode.E))
-            _shield.SetActive(!_shield.activeSelf);
+    public void CastSpell()
+    {
+        Instantiate(_spellToCast, transform.position, Quaternion.identity);
     }
 
     public void UpdateLife(int valueToAdd)
     {
-        // clamp the life between 0 and MaxLife;
-        // if life == 0
-        //    Visual effect + disable the movements of the player, etc etc...
+        _life += valueToAdd;
+        _life = Mathf.Clamp(_life, 0, _maxLife);
+
+        if (_life == 0)
+            Die();
+    }
+
+    public void Die()
+    {
+        // Dissolve effect
     }
 }

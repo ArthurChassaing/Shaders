@@ -14,7 +14,7 @@ public class CollectibleItem : MonoBehaviour
 
             // Apply a visual effect on a player 
                 // => Level up effect / activate shield 
-            // Héritage à utiliser si besoin
+            // Hï¿½ritage ï¿½ utiliser si besoin
 
             // Play a sound (?)
 
