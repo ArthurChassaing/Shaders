@@ -3,8 +3,7 @@ using UnityEngine.AI;
 
 public class FollowPlayer : MonoBehaviour
 {
-    public Transform _Player;
-
+    public Transform Target;
     NavMeshAgent _agent;
 
     void Start()
@@ -14,6 +13,6 @@ public class FollowPlayer : MonoBehaviour
 
     void Update()
     {
-        _agent.SetDestination(_Player.position);
+        _agent.SetDestination(Target.position);
     }
 }
