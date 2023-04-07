@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c7bfe4dc-37fc-47b2-8eb9-02f918541df7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Shaders/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Shaders/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GabrielAguiarProductions/Unique_Projectiles_Volume_1/Settings/UP1_UniversalRenderPipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GabrielAguiarProductions/Unique_Projectiles_Volume_1/Settings/UP1_UniversalRenderPipelineAsset.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GabrielAguiarProductions/Unique_Projectiles_Volume_2/Scripts/UniqueProjectiles/SpawnProjectilesScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GabrielAguiarProductions/Unique_Projectiles_Volume_2/Scripts/UniqueProjectiles/SpawnProjectilesScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +88,7 @@
       <workItem from="1680506936610" duration="4472000" />
       <workItem from="1680513421971" duration="2741000" />
       <workItem from="1680784102242" duration="9000" />
-      <workItem from="1680865787689" duration="5376000" />
+      <workItem from="1680865787689" duration="6504000" />
     </task>
     <servers />
   </component>
