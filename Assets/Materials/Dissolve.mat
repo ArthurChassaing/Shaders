@@ -12,7 +12,8 @@ Material:
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _ISANIMATED
   m_InvalidKeywords: []
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
@@ -38,12 +39,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _ANIMATION: 0
     - _Edge_Width: 0.02
+    - _ISANIMATED: 1
     - _Noice_Scale: 20
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _bool: 0
     m_Colors:
-    - _Edge_Color: {r: 0.07088822, g: 0.1112999, b: 0.5566038, a: 0}
+    - _Edge_Color: {r: 0, g: 0.07379786, b: 0.9150943, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &9058835737536880431
 MonoBehaviour:
