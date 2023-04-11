@@ -18,5 +18,4 @@ public class CollectibleItem : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
 }
