@@ -8,7 +8,6 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float spawnInterval = 40f; 
     [SerializeField] private int enemiesPerWave = 15; 
     [SerializeField] private float delayBetweenEnemies = 1.5f;
-    [SerializeField] private GameObject Target;
 
     private void Start()
     {
@@ -22,7 +21,6 @@ public class EnemySpawner : MonoBehaviour
             for (int i = 0; i < enemiesPerWave; i++)
             {
                 GameObject e = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
-                e.GetComponent<FollowPlayer>().Target = Target.transform;
                 yield return new WaitForSeconds(delayBetweenEnemies);
             }
             yield return new WaitForSeconds(spawnInterval);
