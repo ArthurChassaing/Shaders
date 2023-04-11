@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -8,7 +7,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Transform spawnPoint; 
     [SerializeField] private float spawnInterval = 40f; 
     [SerializeField] private int enemiesPerWave = 15; 
-    [SerializeField] private float delayBetweenEnemies = 1.5f; 
+    [SerializeField] private float delayBetweenEnemies = 1.5f;
 
     private void Start()
     {
@@ -21,7 +20,7 @@ public class EnemySpawner : MonoBehaviour
         {
             for (int i = 0; i < enemiesPerWave; i++)
             {
-                Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+                GameObject e = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
                 yield return new WaitForSeconds(delayBetweenEnemies);
             }
             yield return new WaitForSeconds(spawnInterval);
