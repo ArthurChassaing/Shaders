@@ -9,6 +9,7 @@ public class EnemyDestroy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("TEST"); // This is a test
         _enemyHP -= 50;
         
         if(_enemyHP <= 0)
