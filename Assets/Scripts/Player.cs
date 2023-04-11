@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
 
         if (_areInputsEnabled)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.M))
                 CastSpell();
         }
     }
