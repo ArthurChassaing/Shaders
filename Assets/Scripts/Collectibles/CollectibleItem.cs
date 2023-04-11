@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class CollectibleItem : MonoBehaviour
 {
+    public event System.Action OnCollect;
     [SerializeField] GameObject _FXToSpawn = null;
     [SerializeField] AudioClip _clipToPlay = null;
 
@@ -14,6 +15,8 @@ public class CollectibleItem : MonoBehaviour
 
             if (_clipToPlay != null)
                 AudioSource.PlayClipAtPoint(_clipToPlay, transform.position);
+
+            OnCollect?.Invoke();
 
             Destroy(gameObject);
         }
