@@ -8,7 +8,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Transform spawnPoint; 
     [SerializeField] private float spawnInterval = 40f; 
     [SerializeField] private int enemiesPerWave = 15; 
-    [SerializeField] private float delayBetweenEnemies = 1.5f; 
+    [SerializeField] private float delayBetweenEnemies = 1.5f;
+    [SerializeField] private GameObject Target;
 
     private void Start()
     {
