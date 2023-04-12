@@ -22,7 +22,7 @@ public class EnemyDestroy : MonoBehaviour
         if (_enemyHP <=0)
         {
             isDying = true;
-            gameObject.GetComponent<FollowPlayer>().enabled = false;
+            gameObject.GetComponent<Enemy>().enabled = false;
             gameObject.GetComponent<NavMeshAgent>().enabled = false;
             gameObject.GetComponent<Collider>().enabled = false;
         }
