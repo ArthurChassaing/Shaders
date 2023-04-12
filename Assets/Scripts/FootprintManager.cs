@@ -7,7 +7,7 @@ using UnityEngine.Rendering.Universal;
 public class FootprintManager : MonoBehaviour
 {
     public GameObject LeftPrefab;
-    public float spawnDistance = 1.0f; // The distance between footprint spawns
+    public float spawnDistance = 1f; // The distance between footprint spawns
 
     private Vector3 lastSpawnPosition;
 

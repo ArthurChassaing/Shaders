@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Footprint : MonoBehaviour
 {
-    public float Lifetime = 2.0f;
+    public float Lifetime = 1.5f;
     private float mark;
     private Vector3 OrigSize;
 
