@@ -39,9 +39,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _Edge_Width: 0.02
+    - _ISANIMATED: 0
     - _Noice_Scale: 20
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _testFloat: 0
     m_Colors:
     - _Edge_Color: {r: 0.07088822, g: 0.1112999, b: 0.5566038, a: 0}
   m_BuildTextureStacks: []
