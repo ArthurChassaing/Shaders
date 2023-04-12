@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_WaterOrb
-  m_Shader: {fileID: -6465566751694194690, guid: f254fb5f8f731364e9ac9102065bc8a2,
+  m_Name: Shader Graphs_FireEffect
+  m_Shader: {fileID: -6465566751694194690, guid: d5f31483d8e4b92468e985f24906ff22,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -25,7 +25,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Noise_Map:
-        m_Texture: {fileID: 2800000, guid: 1c3d06ebd8b4933428ba862cbdc4b0fb, type: 3}
+        m_Texture: {fileID: 2800000, guid: 747a6991ae58bee4eb55983aaa849e10, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -42,13 +42,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Exponent: 4.52
+    - _Exponent: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Speed: 0.75
+    - _Speed: 0.5
     m_Colors: []
   m_BuildTextureStacks: []
---- !u!114 &4259668076124844533
+--- !u!114 &3047931745493029415
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
