@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ProjectilMoveMeteor : MonoBehaviour
@@ -5,6 +6,7 @@ public class ProjectilMoveMeteor : MonoBehaviour
 
     public float speed;
     public GameObject impactPrefab;
+    public List<GameObject> impactList;
 
     private Rigidbody rb;
     // Start is called before the first frame update
@@ -37,6 +39,19 @@ public class ProjectilMoveMeteor : MonoBehaviour
                 var impactVFX = Instantiate(impactPrefab, pos, rot) as GameObject;
 
                 Destroy(impactVFX, 5);
+            }
+            if (impactList.Count > 0)
+            {
+                for (int i = 0; i < impactList.Count; i++)
+                {
+                    impactList[i].transform.parent = null;
+                    var ps = impactList[i].GetComponent<ParticleSystem>();
+                    if (ps != null) 
+                    {
+                        ps.Stop();
+                        Destroy(ps.gameObject, ps.main.duration + ps.main.startLifetime.constantMax);
+                    }
+                }
             }
 
             Destroy(gameObject);
