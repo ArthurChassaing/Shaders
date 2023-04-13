@@ -2,13 +2,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private GameObject _spellToCast;
-
     public static Player Instance { get; private set; }
 
     private int _maxLife = 100;
     private int _life = 100;
-    private bool _areInputsEnabled = true;
 
 
     private void Awake()
@@ -17,22 +14,6 @@ public class Player : MonoBehaviour
             Instance = this;
         else
             Destroy(gameObject);
-    }
-
-    void Update()
-    {
-        Shader.SetGlobalVector("_WorldSpacePlayerPos", transform.position);
-
-        if (_areInputsEnabled)
-        {
-            if (Input.GetKeyDown(KeyCode.M))
-                CastSpell();
-        }
-    }
-
-    public void CastSpell()
-    {
-        Instantiate(_spellToCast, transform.position, Quaternion.identity);
     }
 
     public void UpdateLife(int valueToAdd)
@@ -50,6 +31,6 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
-        // Dissolve effect
+        Debug.LogWarning("Player died");
     }
 }
