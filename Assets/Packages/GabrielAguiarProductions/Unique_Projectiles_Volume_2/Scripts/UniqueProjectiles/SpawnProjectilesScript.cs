@@ -22,11 +22,13 @@ public class SpawnProjectilesScript : MonoBehaviour
     private float timeToFire = 0f;
     private GameObject effectToSpawn;
     private Camera singleCamera;
+    private SelectSpell selectSpell;
 
     void Start()
     {
+        selectSpell = GetComponent<SelectSpell>();
         if (VFXs.Count > 0)
-            effectToSpawn = VFXs[0];
+            effectToSpawn = VFXs[selectSpell.GetSpell()];
         else
             Debug.Log("Please assign one or more VFXs in inspector");
 
@@ -36,6 +38,8 @@ public class SpawnProjectilesScript : MonoBehaviour
 
     void Update()
     {
+        effectToSpawn = VFXs[selectSpell.GetSpell()];
+        
         if (Input.GetMouseButton(0) && Time.time >= timeToFire)
         {
             timeToFire = Time.time + 1f / effectToSpawn.GetComponent<ProjectileMoveScript>().fireRate;
