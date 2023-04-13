@@ -29,7 +29,7 @@ public class SelectSpell : MonoBehaviour
             ChangeSpell(-1);
     }
 
-    public void ChangeSpell(int value)
+    private void ChangeSpell(int value)
     {
         _indexOrb += value;
         if (_indexOrb < 0)
@@ -44,5 +44,10 @@ public class SelectSpell : MonoBehaviour
         Destroy(_currentOrb);
         _currentOrb = Instantiate(orbs[_indexOrb], spellSpot.transform.position, Quaternion.identity);
         _currentOrb.transform.parent = spellSpot.transform;
+    }
+    
+    public int GetSpell()
+    {
+        return _indexOrb;
     }
 }
