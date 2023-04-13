@@ -4923,6 +4923,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8514639746097665741}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a5ee5b37d6d6d254f8442831c0b624a1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 227246815020320610}
   m_SourcePrefab: {fileID: 100100000, guid: a5ee5b37d6d6d254f8442831c0b624a1, type: 3}
 --- !u!1 &1597733499585838634 stripped
 GameObject:
@@ -4937,7 +4941,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597733499585838634}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a2c7e2e0603e8041adfe97b094d67ac, type: 3}
   m_Name: 
@@ -4945,6 +4949,7 @@ MonoBehaviour:
   speed: 50
   impactPrefab: {fileID: 4143299064563503543, guid: 640702b550038514face1a43fdfd18a9,
     type: 3}
+  impactList: []
 --- !u!54 &3594242416410011302
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4993,6 +4998,29 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.2, y: 1.2, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &227246815020320610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597733499585838634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ba759cd568c0e47a7018ab70867a0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotate: 0
+  rotateAmount: 45
+  bounce: 0
+  bounceForce: 10
+  speed: 45
+  accuracy: 95
+  fireRate: 4
+  muzzlePrefab: {fileID: 0}
+  hitPrefab: {fileID: 4143299064563503543, guid: 640702b550038514face1a43fdfd18a9,
+    type: 3}
+  trails: []
 --- !u!4 &2118832073677366416 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a5ee5b37d6d6d254f8442831c0b624a1,
