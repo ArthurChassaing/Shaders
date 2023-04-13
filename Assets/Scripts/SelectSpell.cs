@@ -23,10 +23,8 @@ public class SelectSpell : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.E))
             ChangeSpell(1);
-        else if (Input.GetKeyDown(KeyCode.E))
-            ChangeSpell(-1);
     }
 
     private void ChangeSpell(int value)
