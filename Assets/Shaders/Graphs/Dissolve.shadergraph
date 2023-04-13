@@ -16,11 +16,7 @@
             "m_Id": "0d062ebd26574fef8cf25cc5e255c040"
         }
     ],
-    "m_Keywords": [
-        {
-            "m_Id": "43e7c20c67bf47bf9b03ff5a6ce62389"
-        }
-    ],
+    "m_Keywords": [],
     "m_Dropdowns": [],
     "m_CategoryData": [
         {
@@ -299,10 +295,10 @@
     "m_Guid": {
         "m_GuidSerialized": "26ed89ef-a102-4b51-aed7-2357d0f1c62c"
     },
-    "m_Name": "testFloat",
+    "m_Name": "isAnimated",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "testFloat",
-    "m_DefaultReferenceName": "_testFloat",
+    "m_RefNameGeneratedByDisplayName": "isAnimated",
+    "m_DefaultReferenceName": "_isAnimated",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -379,9 +375,6 @@
         },
         {
             "m_Id": "b8de36b20b584630abbe1fcf84ad5404"
-        },
-        {
-            "m_Id": "43e7c20c67bf47bf9b03ff5a6ce62389"
         },
         {
             "m_Id": "0d062ebd26574fef8cf25cc5e255c040"
@@ -616,31 +609,6 @@
     "m_Value": 0.5,
     "m_DefaultValue": 0.5,
     "m_Labels": []
-}
-
-{
-    "m_SGVersion": 1,
-    "m_Type": "UnityEditor.ShaderGraph.ShaderKeyword",
-    "m_ObjectId": "43e7c20c67bf47bf9b03ff5a6ce62389",
-    "m_Guid": {
-        "m_GuidSerialized": "0e3cb2dc-ef7b-4767-baad-e24ee0ab0bf0"
-    },
-    "m_Name": "isAnimated",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "isAnimated",
-    "m_DefaultReferenceName": "_ISANIMATED",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": true,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_DismissedVersion": 0,
-    "m_KeywordType": 0,
-    "m_KeywordDefinition": 0,
-    "m_KeywordScope": 0,
-    "m_KeywordStages": 63,
-    "m_Entries": [],
-    "m_Value": 0,
-    "m_IsEditable": true
 }
 
 {
@@ -1505,7 +1473,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "e411f2cb5e44480ca8678c7cf28ae3ca",
     "m_Id": 0,
-    "m_DisplayName": "testFloat",
+    "m_DisplayName": "isAnimated",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",

@@ -41,7 +41,7 @@ public class EnemyDestroy : MonoBehaviour
             
             foreach (Material m in rend.materials)
             {
-                m.SetFloat("_testFloat", animation);
+                m.SetFloat("_isAnimated", animation);
             }
         }
     }
